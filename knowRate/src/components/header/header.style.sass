@@ -1,0 +1,79 @@
+@import 'header.style.constants'
+
+.Header 
+    height: $header-height
+    line-height: $header-height
+    border-bottom: 2px solid $header-color
+    font-family: $font-family
+    color: $header-color
+    transition: height 0.3s ease
+    
+    .header-content
+        margin: 0 20px 0 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .header-active-content
+            justify-content: flex-start
+
+        .mobile
+            display: none
+        
+        @media screen and (max-width: 822px)
+            .mobile
+                display: block
+
+        @media screen and (max-width: 822px)
+            .fullscreen-header-content
+                display: none
+        
+    .logo-container
+        .header-title
+            font-size: 28px
+            font-weight: bold
+            position: fixed
+            top: 0
+
+        .header-actions
+            justify-content: space-between
+
+@media screen and (min-width: 823px)
+    .header-content-mobile
+        height: $header-height
+    .mobile-list
+        display: none
+
+@media screen and (max-width: 822px)
+    .header-content-mobile
+        height: 160px
+
+ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+    color: $header-color
+
+    .header-join 
+        display: inline
+        padding: 10px
+        font-size: 22px
+        font-weight: 600
+        cursor: pointer
+
+        a 
+            color: $header-color
+
+    .header-join-mobile
+         display: block
+         padding: 0
+
+.mobile-list
+    opacity: 0
+    transition: opacity 3s ease 
+
+.mobile-list-container
+    margin-left: 100px
+
+.mobile-list-closed
+    opacity: 1
